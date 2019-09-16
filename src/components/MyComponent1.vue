@@ -1,9 +1,12 @@
 <template>
     <div>
-        <h2>ポケモン図鑑</h2>
+        <v-container>
+            <v-layout class="row">
         <div v-for="Pokemon in PokemonList" v-bind:key="Pokemon.no">
             <Pokemon v-bind:Pokemon="Pokemon"/>
         </div>
+            </v-layout>
+        </v-container>
     </div>
 </template>
 <script>

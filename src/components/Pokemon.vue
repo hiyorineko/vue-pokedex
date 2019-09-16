@@ -1,11 +1,25 @@
 <template>
-    <div>
-        <h3>Name:{{Pokemon.name}}</h3>
-
+    <div class="">
+        <v-flex xs4>
+        <v-card min-width="300px" height="100%" @click.stop="dialog = true">
+            <v-card-title>{{Pokemon.no}}:{{Pokemon.name}}</v-card-title>
+            <v-divider></v-divider>
+            <v-card-text height="300px">{{Pokemon.form}}</v-card-text>
+            <v-card-text height="300px">タイプ1:{{Pokemon.types[0]}}</v-card-text>
+            <v-card-text height="300px">タイプ2:{{Pokemon.types[1]}}</v-card-text>
+        </v-card>
+            </v-flex>
+        <v-dialog v-model="dialog" scrollable max-width="80%">
+            <v-card>
+                <v-card-title>{{Pokemon.no}}:{{Pokemon.name}}</v-card-title>
+                <v-divider></v-divider>
+                <v-card-text height="300px">{{Pokemon.form}}</v-card-text>
+                <v-card-text height="300px">タイプ1:{{Pokemon.types[0]}}</v-card-text>
+                <v-card-text height="300px">タイプ2:{{Pokemon.types[1]}}</v-card-text>
+            </v-card>
+        </v-dialog>
     </div>
-
 </template>
-
 <script>
     export default {
         name: "Pokemon",
@@ -27,6 +41,11 @@
                     spDefence: Number,
                     speed: Number
                 }
+            }
+        },
+        data(){
+            return {
+                dialog: false
             }
         }
     }
