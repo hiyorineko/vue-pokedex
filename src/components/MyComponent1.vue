@@ -1,10 +1,10 @@
 <template>
     <div>
         <v-container>
-            <v-layout class="row">
-        <div v-for="Pokemon in PokemonList" v-bind:key="Pokemon.no">
-            <Pokemon v-bind:Pokemon="Pokemon"/>
-        </div>
+            <v-layout class="row" mt-5 px-3 py-3>
+                <div v-for="Pokemon in PokemonList" v-bind:key="Pokemon.index">
+                    <Pokemon v-bind:Pokemon="Pokemon"/>
+                </div>
             </v-layout>
         </v-container>
     </div>
@@ -33,5 +33,4 @@
 </script>
 
 <style scoped>
-
 </style>
