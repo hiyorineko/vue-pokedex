@@ -12,16 +12,12 @@
 <script>
     import Pokemon from './Pokemon.vue'
     import PokemonData from '@/assets/pokemon_data.json'
-
-    // assets/pokemon_data.jsonを読み込んで
-    // pokemon.vueに渡す
-    // v-forでpokemon.vueをいくつも表示する
     export default {
         name: "MyComponent1",
         components: {
             Pokemon
         },
-        data: () => {
+        data() {
             return {
                 PokemonList: []
             }

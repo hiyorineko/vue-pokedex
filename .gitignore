@@ -21,3 +21,4 @@ yarn-error.log*
 *.sw?
 /src/assets/pokemon_data.json
 /src/firebase.js
+/.firebase/
