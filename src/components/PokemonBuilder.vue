@@ -1,6 +1,11 @@
 <template>
     <div>
         <v-container>
+            <v-layout class="row">
+                <div v-for="type in types" v-bind:key="type.index">
+                    <v-btn @click="selectType=type">{{type}}</v-btn>
+                </div>
+            </v-layout>
             <v-text-field
                     v-model="keyword"
                     label="ポケモンの名前を入れてね"
@@ -24,7 +29,29 @@
         data() {
             return {
                 keyword:"",
+                selectType:"すべて",
                 originPokemonList: [],
+                types:[
+                    "すべて",
+                    "ノーマル",
+                    "ほのお",
+                    "みず",
+                    "でんき",
+                    "くさ",
+                    "こおり",
+                    "かくとう",
+                    "どく",
+                    "じめん",
+                    "ひこう",
+                    "エスパー",
+                    "むし",
+                    "いわ",
+                    "ゴースト",
+                    "ドラゴン",
+                    "あく",
+                    "はがね",
+                    "フェアリー"
+                ],
             }
         },
         created () {
@@ -36,7 +63,12 @@
                 for (let i in this.originPokemonList) {
                     let p = this.originPokemonList[i];
                     if (p.name.indexOf(this.transHiraToKana(this.keyword)) !== -1) {
-                        PokemonList.push(p);
+                        if (p.types[0] == this.selectType || p.types[1] == this.selectType) {
+                            PokemonList.push(p);
+                        }
+                        if (this.selectType == "すべて") {
+                            PokemonList.push(p);
+                        }
                     }
                 }
                 return PokemonList;
@@ -48,7 +80,7 @@
                     let chr = match.charCodeAt(0) + 0x60;
                     return String.fromCharCode(chr);
                 });
-            }
+            },
         },
     }
 </script>

@@ -51,7 +51,7 @@
                 textClass: "",
             }
         },
-        created() {
+        mounted() {
             switch (this.Pokemon.types[0]) {
                 case "ノーマル":
                     this.titleClass = "normal_bg";
