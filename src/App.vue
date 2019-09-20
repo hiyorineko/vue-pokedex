@@ -16,19 +16,19 @@
     </v-app-bar>
     <v-content>
       <MyMain/>
-      <MyComponent1 />
+      <PokemonBuilder />
     </v-content>
   </v-app>
 </template>
 
 <script>
   import MyMain from './components/MyMain.vue'
-  import MyComponent1 from './components/MyComponent1.vue'
+  import PokemonBuilder from './components/PokemonBuilder.vue'
   export default {
     name: 'app',
     components: {
       MyMain,
-      MyComponent1
+      PokemonBuilder
     }
   }
 </script>
