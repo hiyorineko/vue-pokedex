@@ -51,119 +51,127 @@
                 textClass: "",
             }
         },
-        mounted() {
-            switch (this.Pokemon.types[0]) {
-                case "ノーマル":
-                    this.titleClass = "normal_bg";
-                    break;
-                case "ほのお":
-                    this.titleClass = "fire_bg";
-                    break;
-                case "みず":
-                    this.titleClass = "water_bg";
-                    break;
-                case "でんき":
-                    this.titleClass = "electric_bg";
-                    break;
-                case "くさ":
-                    this.titleClass = "grass_bg";
-                    break;
-                case "こおり":
-                    this.titleClass = "ice_bg";
-                    break;
-                case "かくとう":
-                    this.titleClass = "fighting_bg";
-                    break;
-                case "どく":
-                    this.titleClass = "poison_bg";
-                    break;
-                case "じめん":
-                    this.titleClass = "ground_bg";
-                    break;
-                case "ひこう":
-                    this.titleClass = "flying_bg";
-                    break;
-                case "エスパー":
-                    this.titleClass = "psychic_bg";
-                    break;
-                case "むし":
-                    this.titleClass = "bug_bg";
-                    break;
-                case "いわ":
-                    this.titleClass = "rock_bg";
-                    break;
-                case "ゴースト":
-                    this.titleClass = "ghost_bg";
-                    break;
-                case "ドラゴン":
-                    this.titleClass = "dragon_bg";
-                    break;
-                case "あく":
-                    this.titleClass = "dark_bg";
-                    break;
-                case "はがね":
-                    this.titleClass = "steel_bg";
-                    break;
-                case "フェアリー":
-                    this.titleClass = "fairy_bg";
-                    break;
-            }
-            switch (this.Pokemon.types[1]) {
-                case "ノーマル":
-                    this.textClass = "normal_bg";
-                    break;
-                case "ほのお":
-                    this.textClass = "fire_bg";
-                    break;
-                case "みず":
-                    this.textClass = "water_bg";
-                    break;
-                case "でんき":
-                    this.textClass = "electric_bg";
-                    break;
-                case "くさ":
-                    this.textClass = "grass_bg";
-                    break;
-                case "こおり":
-                    this.textClass = "ice_bg";
-                    break;
-                case "かくとう":
-                    this.textClass = "fighting_bg";
-                    break;
-                case "どく":
-                    this.textClass = "poison_bg";
-                    break;
-                case "じめん":
-                    this.textClass = "ground_bg";
-                    break;
-                case "ひこう":
-                    this.textClass = "flying_bg";
-                    break;
-                case "エスパー":
-                    this.textClass = "psychic_bg";
-                    break;
-                case "むし":
-                    this.textClass = "bug_bg";
-                    break;
-                case "いわ":
-                    this.textClass = "rock_bg";
-                    break;
-                case "ゴースト":
-                    this.textClass = "ghost_bg";
-                    break;
-                case "ドラゴン":
-                    this.textClass = "dragon_bg";
-                    break;
-                case "あく":
-                    this.textClass = "dark_bg";
-                    break;
-                case "はがね":
-                    this.textClass = "steel_bg";
-                    break;
-                case "フェアリー":
-                    this.textClass = "fairy_bg";
-                    break;
-            }
+        methods: {
+            setPokemonClass: function () {
+                switch (this.Pokemon.types[0]) {
+                    case "ノーマル":
+                        this.titleClass = "normal_bg";
+                        break;
+                    case "ほのお":
+                        this.titleClass = "fire_bg";
+                        break;
+                    case "みず":
+                        this.titleClass = "water_bg";
+                        break;
+                    case "でんき":
+                        this.titleClass = "electric_bg";
+                        break;
+                    case "くさ":
+                        this.titleClass = "grass_bg";
+                        break;
+                    case "こおり":
+                        this.titleClass = "ice_bg";
+                        break;
+                    case "かくとう":
+                        this.titleClass = "fighting_bg";
+                        break;
+                    case "どく":
+                        this.titleClass = "poison_bg";
+                        break;
+                    case "じめん":
+                        this.titleClass = "ground_bg";
+                        break;
+                    case "ひこう":
+                        this.titleClass = "flying_bg";
+                        break;
+                    case "エスパー":
+                        this.titleClass = "psychic_bg";
+                        break;
+                    case "むし":
+                        this.titleClass = "bug_bg";
+                        break;
+                    case "いわ":
+                        this.titleClass = "rock_bg";
+                        break;
+                    case "ゴースト":
+                        this.titleClass = "ghost_bg";
+                        break;
+                    case "ドラゴン":
+                        this.titleClass = "dragon_bg";
+                        break;
+                    case "あく":
+                        this.titleClass = "dark_bg";
+                        break;
+                    case "はがね":
+                        this.titleClass = "steel_bg";
+                        break;
+                    case "フェアリー":
+                        this.titleClass = "fairy_bg";
+                        break;
+                }
+                switch (this.Pokemon.types[1]) {
+                    case "ノーマル":
+                        this.textClass = "normal_bg";
+                        break;
+                    case "ほのお":
+                        this.textClass = "fire_bg";
+                        break;
+                    case "みず":
+                        this.textClass = "water_bg";
+                        break;
+                    case "でんき":
+                        this.textClass = "electric_bg";
+                        break;
+                    case "くさ":
+                        this.textClass = "grass_bg";
+                        break;
+                    case "こおり":
+                        this.textClass = "ice_bg";
+                        break;
+                    case "かくとう":
+                        this.textClass = "fighting_bg";
+                        break;
+                    case "どく":
+                        this.textClass = "poison_bg";
+                        break;
+                    case "じめん":
+                        this.textClass = "ground_bg";
+                        break;
+                    case "ひこう":
+                        this.textClass = "flying_bg";
+                        break;
+                    case "エスパー":
+                        this.textClass = "psychic_bg";
+                        break;
+                    case "むし":
+                        this.textClass = "bug_bg";
+                        break;
+                    case "いわ":
+                        this.textClass = "rock_bg";
+                        break;
+                    case "ゴースト":
+                        this.textClass = "ghost_bg";
+                        break;
+                    case "ドラゴン":
+                        this.textClass = "dragon_bg";
+                        break;
+                    case "あく":
+                        this.textClass = "dark_bg";
+                        break;
+                    case "はがね":
+                        this.textClass = "steel_bg";
+                        break;
+                    case "フェアリー":
+                        this.textClass = "fairy_bg";
+                        break;
+                }
+            },
+        },
+        created() {
+            this.setPokemonClass();
+        },
+        updated() {
+            this.setPokemonClass();
         }
     }
 </script>
