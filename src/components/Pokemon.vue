@@ -164,6 +164,9 @@
                     case "フェアリー":
                         this.textClass = "fairy_bg";
                         break;
+                    default:
+                        this.textClass = "normal_bg";
+                        break;
                 }
             },
         },
