@@ -1,6 +1,5 @@
 <template>
     <div>
-        <v-flex xs4>
         <v-card min-width="300px" height="100%" @click.stop="dialog = true">
             <v-card-title :class="titleClass">{{Pokemon.no}}:{{Pokemon.name}}</v-card-title>
             <v-divider></v-divider>
@@ -9,7 +8,6 @@
                 <span v-else>-</span>
             </v-card-text>
         </v-card>
-            </v-flex>
         <v-dialog v-model="dialog" scrollable max-width="80%">
             <v-card>
                 <v-card-title>{{Pokemon.no}}:{{Pokemon.name}}</v-card-title>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-container>
+        <v-container fluid>
             <v-layout class="row">
                 <div v-for="type in types" v-bind:key="type.index">
                     <v-btn @click="selectType=type">{{type}}</v-btn>

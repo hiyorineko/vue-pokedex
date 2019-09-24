@@ -18,17 +18,22 @@
       <MyMain/>
       <PokemonBuilder />
     </v-content>
+    <v-footer app>
+      <MyTabbar />
+    </v-footer>
   </v-app>
 </template>
 
 <script>
   import MyMain from './components/MyMain.vue'
   import PokemonBuilder from './components/PokemonBuilder.vue'
+  import MyTabbar from './components/MyTabbar.vue'
   export default {
     name: 'app',
     components: {
       MyMain,
-      PokemonBuilder
+      PokemonBuilder,
+      MyTabbar
     }
   }
 </script>
